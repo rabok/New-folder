@@ -13,13 +13,14 @@ class DrinksScreen extends StatefulWidget {
 class _DrinksScreenState extends State<DrinksScreen> {
   List<Dish> drinks = [
     Dish(name: 'soda 350 ml', price: 60, orderCount: 0),
-    Dish(name: 'lemonade ', price: 100, orderCount: 0),
-    Dish(name: 'Afia', price: 55, orderCount: 0),
-    Dish(name: 'water', price: 300, orderCount: 0),
-    Dish(name: 'mango juice', price: 300, orderCount: 0),
+    Dish(name: 'lemonade ', price: 55, orderCount: 0),
+    Dish(name: 'Afia 500ml', price: 100, orderCount: 0),
+    Dish(name: 'water', price: 50, orderCount: 0),
+    Dish(name: 'mango juice', price: 100, orderCount: 0),
     Dish(name: 'black coffe', price: 50, orderCount: 0),
     Dish(name: 'white coffee', price: 50, orderCount: 0),
     Dish(name: 'lemmon coffe', price: 50, orderCount: 0),
+    Dish(name: 'all juice', price: 100, orderCount: 0),
     // Add more drinks here
   ];
 

@@ -18,7 +18,8 @@ class _SpecialsPageState extends State<SpecialsPage> {
     Dish(name: 'smokies', price: 60, orderCount: 0),
     Dish(name: 'white chapti', price: 30, orderCount: 0),
     Dish(name: 'spanish omlette', price: 100, orderCount: 0),
-    Dish(name: 'Beef samosa', price: 250, orderCount: 0),
+    Dish(name: 'Beef samosa', price: 50, orderCount: 0),
+    Dish(name: 'taco', price: 250, orderCount: 0),
     Dish(name: 'tomato sauce', price: 5, orderCount: 0),
   ];
 
