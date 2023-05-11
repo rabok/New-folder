@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:glassmorphism/glassmorphism.dart';
-import 'login.dart';
 
-class OnboardingScreen extends StatelessWidget {
+class CreateAccountPage extends StatelessWidget {
+  final TextEditingController emailController = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -10,7 +12,7 @@ class OnboardingScreen extends StatelessWidget {
       body: Stack(
         children: <Widget>[
           Image.asset(
-            'assets/WW.jpg', // replace with your own image path
+            'assets/createaccount.jpg', // replace with your own image path
             fit: BoxFit.cover,
             width: double.infinity,
             height: double.infinity,
@@ -45,31 +47,35 @@ class OnboardingScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Text(
-                      'Welcome to our Food Delivery App!',
+                      'Create a new account',
                       style:
                           TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 20),
-                    Text(
-                      'Experience the best and fastest food delivery service in town. Customise your orders the way you want it.',
-                      style: TextStyle(fontSize: 18),
-                      textAlign: TextAlign.center,
+                    TextField(
+                      controller: emailController,
+                      decoration: InputDecoration(labelText: "Email"),
                     ),
-                    SizedBox(height: 40),
+                    TextField(
+                      controller: passwordController,
+                      obscureText: true,
+                      decoration: InputDecoration(labelText: "Password"),
+                    ),
+                    SizedBox(height: 20),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.blue, // background color
-                        onPrimary: Colors.white, // text color
+                        primary: Colors.blue,
+                        onPrimary: Colors.white,
                       ),
                       onPressed: () {
-                        navigateToLogin(context);
+                        createAccount();
                       },
                       child: Padding(
                         padding:
                             EdgeInsets.symmetric(horizontal: 50, vertical: 10),
-                        child:
-                            Text('Get Started', style: TextStyle(fontSize: 18)),
+                        child: Text('Create Account',
+                            style: TextStyle(fontSize: 18)),
                       ),
                     ),
                   ],
@@ -82,8 +88,7 @@ class OnboardingScreen extends StatelessWidget {
     );
   }
 
-  void navigateToLogin(BuildContext context) {
-    Navigator.push(
-        context, MaterialPageRoute(builder: (context) => LoginPage()));
+  void createAccount() {
+    // Perform create account operation
   }
 }
